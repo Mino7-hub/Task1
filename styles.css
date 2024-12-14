@@ -1,93 +1,348 @@
-/* Fundamental CSS Concepts */
-
-/* Reset styles for a consistent look across browsers */
-* {
-  margin: 0; /* Removes default margins */
-  padding: 0; /* Removes default padding */
-  box-sizing: border-box; /* Includes padding and border in width/height */
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Styling for the body (global styles) */
+/* Body Styling */
 body {
-  font-family: Arial, sans-serif; /* Sets the font style for text */
-  background-color: #f4f4f4; /* Light gray background color */
-  color: #333; /* Dark gray text color */
-  padding: 20px; /* Adds spacing around the body */
+  font-family: 'Orbitron', sans-serif; /* Cyberpunk-inspired font */
+  line-height: 1.6;
+  background: #000000; /* Near-black background */
+  color: #d1d1d1; /* Soft white for readability */
+  margin: 0;
+  overflow-x: hidden;
 }
 
-/* Header styles */
+/* Header */
 header {
-  text-align: center; /* Centers text in the header */
-  background-color: #4caf50; /* Green background */
-  color: white; /* White text */
-  padding: 20px; /* Spacing inside the header */
+  background: #0a0a0a; /* Slightly lighter black for contrast */
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.2);
 }
 
 header h1 {
-  margin-bottom: 10px; /* Adds spacing below the main heading */
+  font-size: 2.5rem;
+  color: #00ffff; /* Neon cyan */
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
 }
 
-/* Bio Section */
-.bio {
-  display: flex; /* Aligns content in a row */
-  align-items: center; /* Vertically centers items */
-  margin-top: 20px; /* Adds spacing above the section */
+header nav ul {
+  list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.bio img {
-  border-radius: 50%; /* Makes the image circular */
-  width: 100px; /* Sets image width */
-  height: 100px; /* Sets image height */
-  margin-right: 20px; /* Spacing to the right of the image */
+header nav ul li a {
+  color: #00bfff; /* Neon blue */
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+  transition: transform 0.3s, text-shadow 0.3s;
 }
 
-/* Skills Section */
-.skills {
-  margin-top: 20px; /* Adds spacing above the section */
+header nav ul li a:hover {
+  transform: scale(1.2);
+  text-shadow: 0 0 20px #00bfff, 0 0 40px #00bfff;
 }
 
-.skills ul {
-  list-style: none; /* Removes bullets from the list */
-  padding-left: 20px; /* Adds padding for indentation */
+/* Section Styling */
+section {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  background: linear-gradient(145deg, #050505, #111111); /* Slight gradient for depth */
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 0 30px rgba(0, 255, 255, 0.3);
+  color: #d1d1d1;
 }
 
-.skills li {
-  margin-bottom: 5px; /* Adds spacing between list items */
+section h2 {
+  color: #00ffff; /* Neon cyan */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
 }
 
-/* Portfolio Section */
-.portfolio {
-  margin-top: 20px; /* Adds spacing above the section */
+section p, section .project-card {
+  font-size: 1.1rem;
+  color: #a9a9a9; /* Slightly dimmed text */
 }
 
-.portfolio a {
-  color: #4caf50; /* Green link color */
-  text-decoration: none; /* Removes underline from links */
+/* Project Cards */
+.project-card {
+  padding: 1rem;
+  margin: 1rem 0;
+  background: #0d0d0d; /* Slightly lighter black for contrast */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.portfolio a:hover {
-  text-decoration: underline; /* Adds underline on hover */
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
-/* Footer Section */
+.project-card h3 {
+  color: #00bfff; /* Neon blue */
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+}
+
+/* Footer */
 footer {
-  text-align: center; /* Centers text in the footer */
-  margin-top: 40px; /* Adds spacing above the footer */
+  text-align: center;
+  padding: 1rem;
+  background: #0a0a0a;
+  color: #00ffff;
+  font-size: 1rem;
+  box-shadow: 0px -4px 10px rgba(0, 255, 255, 0.2);
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
 }
 
-footer a {
-  color: #4caf50; /* Green link color */
+/* Contact Links */
+section a {
+  color: #00ffff;
+  text-decoration: none;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
-/* Responsive Design */
-/* Adjust layout for screens smaller than 600px */
-@media (max-width: 600px) {
-  .bio {
-    flex-direction: column; /* Stacks items vertically */
-    align-items: flex-start; /* Aligns items to the left */
+section a:hover {
+  text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+}
+/* About Section */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Space between the image and text */
+}
+
+.about-image {
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+  border-radius: 50%; /* Makes the image circular */
+  border: 3px solid #00ffff; /* Neon cyan border */
+  box-shadow: 0 0 20px #00ffff, 0 0 40px rgba(0, 255, 255, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #00ffff, 0 0 60px rgba(0, 255, 255, 0.7);
+}
+
+.about-content h2 {
+  color: #00ffff; /* Matches the theme */
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #a9a9a9; /* Soft white */
+}
+/* Game Reviews Section */
+#game-reviews {
+  padding: 2rem;
+  background-color: #1c1c1c;
+  color: #00ffff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+#game-reviews h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+.review-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.review-list li {
+  margin-bottom: 1rem;
+}
+
+.review-title {
+  font-size: 1.8rem;
+  color: #00ffff;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.review-title:hover {
+  color: #00ffcc;
+  text-decoration: underline;
+}
+
+/* Music Player Section */
+#music-player-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Music Toggle Button */
+.music-toggle-btn {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 255, 255, 0.3); /* Semi-transparent cyan */
+  color: #00ffff;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 50px;
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  border-radius: 50%;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: opacity 0.3s, background 0.3s, border-color 0.3s, transform 0.3s;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.music-toggle-btn:hover {
+  opacity: 1; /* Fully visible on hover */
+  background: rgba(0, 255, 255, 1);
+  border-color: rgba(0, 255, 255, 1);
+  transform: scale(1.1); /* Slightly enlarge */
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+}
+
+/* Music Player Section */
+#music-player-container {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Music Toggle Button */
+.music-toggle-btn {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 255, 255, 0.3); /* Semi-transparent cyan */
+  color: #00ffff;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 50px;
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  border-radius: 50%;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: opacity 0.3s, background 0.3s, border-color 0.3s, transform 0.3s;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.music-toggle-btn:hover {
+  opacity: 1;
+  background: rgba(0, 255, 255, 1);
+  border-color: rgba(0, 255, 255, 1);
+  transform: scale(1.1); /* Slightly enlarge */
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+}
+
+/* Music Player */
+.music-player {
+  display: none; /* Hidden by default */
+  background: #111111;
+  color: #00ffff;
+  padding: 1rem;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.music-player h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+.player-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.song-item {
+  background: #1a1a1a;
+  border: 2px solid #00ffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  text-align: left;
+}
+
+.song-item p {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #00ffff;
+}
+
+audio {
+  width: 100%;
+  outline: none;
+  border: 2px solid #00ffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(164, 184, 184, 0.5);
+}
+
+/* Show the music player when checkbox is checked */
+#toggle-music:checked ~ #music-player {
+  display: block;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 255, 255, 0.3); /* Semi-transparent cyan */
+  color: #00ffff;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 50px;
+  border: 2px solid rgba(0, 255, 255, 0.3); /* Semi-transparent border */
+  border-radius: 50%;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: opacity 0.3s, background 0.3s, border-color 0.3s, transform 0.3s;
+  z-index: 1000; /* Ensure it stays above other content */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); /* Soft glow */
+}
+
+.back-to-top:hover {
+  opacity: 1; /* Fully visible on hover */
+  background: rgba(0, 255, 255, 1);
+  border-color: rgba(0, 255, 255, 1);
+  transform: scale(1.1); /* Slightly enlarge */
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+}
+
+.back-to-top:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  header nav ul {
+      flex-direction: column;
+      gap: 1rem;
   }
 
-  .bio img {
-    margin-bottom: 10px; /* Adds spacing below the image */
+  section {
+      margin: 1rem;
   }
 }
